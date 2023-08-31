@@ -1,4 +1,19 @@
+body {
+font-size: 22px;
+}
+
+
 .logo_img {
     height: 200px;
     width: 200px;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    padding: 20px;
+    z-index: 1000;
+    background: #d6ad27;
+    -webkit-box-shadow: 0 5px 25px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.15);
 }
