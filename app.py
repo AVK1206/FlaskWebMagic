@@ -23,17 +23,25 @@ def create():
         try:
             db.session.add(post)
             db.session.commit()
-            return redirect("/")
+            return redirect("/notations")
         except:
             return "An error occurred while adding the article"
     else:
         return render_template("create.html")
 
 
+@app.route("/notations/")
+def all_notations():
+    notations = Post.query.all()
+    return render_template("all_notations.html", notations=notations)
+
+
+
 @app.route("/index/")
 @app.route("/")
 def index():
     return render_template("index.html")
+
 
 @app.route("/about/")
 def about():
