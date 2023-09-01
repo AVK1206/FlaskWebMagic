@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block title %}
+All Notations
+{% endblock %}
+
+{% block head %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/all_notations.css') }}">
+{% endblock %}
+
+{% block body %}
+<h1>All Notations</h1>
+
+<div class="row">
+    {% for notation in notations %}
+    <div class="column">
+        <div class="item_in">
+            <h4>{{ notation.title }}</h4>
+            <p>{{ notation.text }}</p>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+{% endblock%}
