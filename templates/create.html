@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block title %}
+Add Notation
+{% endblock %}
+
+{% block body %}
+<h1>Add Notation</h1>
+<form method="post" class="form-control">
+  <input type="text" name="title" placeholder="Enter the title of the article"><br>
+  <input type="text" name="text" placeholder="Enter the text of the article"><br>
+  <button class="btn btn-success" type="submit">Create</button>
+</form>
+
+{% endblock %}
